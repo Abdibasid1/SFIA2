@@ -2,22 +2,22 @@ version: "3.7"
 services:
   raffle_frontend:
     container_name: raffle_frontend
-    image : basidyaccub43/raffle:latest
+    image : abdibasid1/raffle:latest
     build: ./raffle
     ports:
     - target: 5000
       published: 5000
   number_backend:
     container_name: SFIA2_number
-    image : basidyaccub43/number:latest
+    image : abdibasid1/number:latest
     build: ./number
   prize_backend:
     container_name: SFIA2_prize
-    image : basidyaccub43/prize:latest
+    image : abdibasid1/prize:latest
     build: ./prize
   winner_backend:
     container_name: SFIA2_winner
-    image : basidyaccub43/winner:latest
+    image : abdibasid1/winner:latest
     build: ./winner
   
 
