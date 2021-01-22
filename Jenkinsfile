@@ -19,6 +19,7 @@ pipeline {
         }
         stage('Deploy') {
             steps {
+	    	sh "docker rm -f \$(docker ps -qa)"
                 sh "bash deploy.sh"    
             }
         }
