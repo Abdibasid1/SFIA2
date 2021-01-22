@@ -3,7 +3,7 @@ pipeline {
     stages {
 		app_version = 'v1'
 		docker_creds = credentials('docker-hub-credentials')
-		DATABASE_URI = credentials('database-uri')
+		//DATABASE_URI = credentials('database-uri')
 	}
         stage('Build') {
             steps {
