@@ -1,10 +1,11 @@
 pipeline {
     agent any
-    stages {
+    environment {
 		app_version = 'v1'
 		docker_creds = credentials('docker-hub-credentials')
 		//DATABASE_URI = credentials('database-uri')
 	}
+    stages{
         stage('Build') {
             steps {
                 // install docker and docker-compose
