@@ -12,6 +12,7 @@ pipeline {
                 // add jenkins to docker group
                 // sudo su - jenkins, docker login
                 // docker-compose build and push
+                sh "docker login -u ${docker_creds_USR} -p ${docker_creds_PSW}"
                 sh "docker-compose build && docker-compose push"
             
             }
